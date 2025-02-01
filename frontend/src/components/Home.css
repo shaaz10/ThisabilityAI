@@ -1,0 +1,17 @@
+.home-container{
+    position: relative;
+}
+.button-container{
+    position: absolute;
+    top: 150px;
+    left: 70px;
+
+}
+.button-container button:hover{
+    transform: scale(1.2);
+    background: white;
+    color: black;
+    border: 3px solid white;
+} 
+
+  

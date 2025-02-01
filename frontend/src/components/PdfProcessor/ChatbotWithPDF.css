@@ -1,0 +1,131 @@
+/* Floating Button */
+.floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.9;
+  }
+  .chatbot{
+    background-color: #ffffff;
+  }
+  .floating-btn:hover {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  
+  .floating-btn.open {
+    background-color: #28a745;
+  }
+  
+  /* Chat Window */
+  .chat-window {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: white;
+    width: 400px;
+    height: 500px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: slideIn 0.5s ease;
+  }
+  
+  .chat-header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .chat-header .close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .chat-history {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+  }
+  
+  .user-message, .bot-message {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: white;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  .bot-message {
+    background-color: #e2e2e2;
+    color: black;
+    display: flex;
+    align-items: center;
+  }
+  
+  .bot-message::before {
+    content: url('https://i.pinimg.com/originals/1c/5b/db/1c5bdb09223ca54342fef98eccc59f06.gif');
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  input.form-control {
+    border-radius: 20px;
+    padding: 10px;
+  }
+  
+  .chatbot button.btn {
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+  }
+  
+  .chatbot button.btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Animation for smooth appearance */
+  @keyframes slideIn {
+    from {
+      right: -450px;
+    }
+    to {
+      right: 20px;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
